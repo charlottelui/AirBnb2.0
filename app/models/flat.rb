@@ -1,5 +1,5 @@
 class Flat < ApplicationRecord
-  belongs_to: :user
+  belongs_to :user
 
   validates :address, presence: true
   validates :title, presence: true
