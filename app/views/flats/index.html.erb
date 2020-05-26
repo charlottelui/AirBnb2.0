@@ -1,13 +1,20 @@
 <div class="d-flex full-screen-container-index">
   <!-- flats -->
   <div class="left-container">
-    <h3>This will be search result</h3>
-    <h1>Stays in search result city</h1>
-    <h2>filter options</h2>
+    <div class="search-results">
+      <h3>This will be search result</h3>
+      <h1>Stays in search result city</h1>
+      <h2>filter options</h2>
+    </div>
     <div class="index-flat-cards">
       <% @flats.each do |flat| %>
         <div class="index-flat-card">
-
+          <div class="index-card-details">
+            <div class = "small-light-grey-text"><%= flat.flat_type %></div>
+            <div class = "flat-title-index"><%= flat.title %></div>
+            <div class = "small-light-grey-text"><%= flat.bedrooms %> bedrooms - <%= flat.bathrooms %> baths</div>
+            <div class = "flat-price"><strong>$<%= flat.price %></strong> / night</h2>
+          </div>
         </div>
       <% end %>
     </div>
