@@ -4,6 +4,7 @@
 
 .index-flat-card {
   padding: 16px;
+  border-bottom: 1px solid lightgray;
 }
 
 .small-light-grey-text {
@@ -17,3 +18,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.index-flat-card .index-card-details {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}

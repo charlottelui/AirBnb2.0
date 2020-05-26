@@ -10,12 +10,16 @@
       <% @flats.each do |flat| %>
         <div class="index-flat-card">
           <div class="index-card-details">
-            <div class = "small-light-grey-text"><%= flat.flat_type %></div>
-            <div class = "flat-title-index"><%= flat.title %></div>
-            <div class = "small-light-grey-text"><%= flat.bedrooms %> bedrooms - <%= flat.bathrooms %> baths</div>
-            <div class = "flat-price"><strong>$<%= flat.price %></strong> / night</div>
+            <div>
+              <h2 class = "small-light-grey-text"><%= flat.flat_type %></h2>
+              <h2 class = "flat-title-index"><%= flat.title %></h2>
+              <h2 class = "small-light-grey-text"><%= flat.bedrooms %> bedrooms - <%= flat.bathrooms %> baths</h2>
+            </div>
+            <div class="index-flat-card-pricing">
+              <div class = "flat-price"><strong>$<%= flat.price %></strong> / night</div>
+            </div>
           </div>
-          </div>
+        </div>
       <% end %>
     </div>
   </div>
