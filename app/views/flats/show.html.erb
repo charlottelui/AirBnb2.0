@@ -1,2 +1,104 @@
-<%= @flat.title %>
-<%= @flat.location %>
+<div class="container">
+  <h1><%= @flat.title %> </h1>
+  <p><%= @flat.address %></p>
+  <img src="https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="flat">
+  <div class="card-flat">
+    <div class="card-flat-infos">
+      <div>
+        <h2><%= @flat.flat_type.capitalize %> hosted by <%=  @flat.user.email%></h2>
+        <div class="card-flat-info-flex">
+          <% if @flat.guests == 1 %>
+            <p><%= @flat.guests %> guest· </p>
+          <%else %>
+            <p><%= @flat.guests %> guests· </p>
+          <%end %>
+
+          <% if @flat.bedrooms == 1 %>
+            <p><%= @flat.bedrooms %> bed· </p>
+          <%else %>
+            <p><%= @flat.bedrooms %> beds· </p>
+          <%end %>
+
+          <% if @flat.bathrooms == 1 %>
+            <p><%= @flat.bathrooms %> bath </p>
+          <%else %>
+            <p><%= @flat.bathrooms %> baths </p>
+          <%end %>
+        </div>
+      </div>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    </div>
+  </div>
+  <hr>
+
+  <div class="details">
+    <div class="details-flex">
+      <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;"><path d="M928 417L680 606l95 306c3 12-6 24-16 24-3 0-5-1-8-4L500 741 251 931c-8 5-18 3-23-4-4-5-4-7-3-12l1-1 94-306L72 417c-8-7-10-11-6-23 3-8 9-12 14-12h309l96-307c2-6 8-11 14-11 7 0 13 5 16 13l96 305h309c6 0 12 4 14 12 4 12 3 16-6 23m44-35c-8-24-29-40-52-40H640L553 65c-7-24-29-41-54-41-24 0-45 16-52 39l-87 279H80c-23 0-44 16-52 40-9 28-2 50 19 67l227 174-86 278c-7 18-4 35 8 51 19 24 53 29 78 12l226-172 226 172c10 8 21 12 33 12 36 0 65-36 54-75l-87-280 226-172c22-17 29-39 20-67"></path></svg>
+      <h4><%= @flat.flat_type.capitalize %></h4>
+    </div>
+    <% if @flat.flat_type == "entire place" %>
+      <p>You'll have the apartment to yourself</p>
+    <%elsif @flat.flat_type == "private room"%>
+      <p>You'll have the room to yourself</p>
+    <%else %>
+      <p>You'll have the share the apartment with wonderful people</p>
+    <%end %>
+  </div>
+  <hr>
+
+  <div class="description">
+    <h4><%=@flat.description  %></h4>
+    <p> Contant host</p>
+  </div>
+  <hr>
+
+  <div class="amenities">
+    <h3>Aminities</h3>
+  </div>
+  <hr>
+
+  <div class="dates">
+    <h3>Selet check-in date</h3>
+    <h4>Add your travel dates for exact pricing</h4>
+  </div>
+  <hr>
+
+  <div class="reviews">
+    <div class="ave-reviews">
+      4.73 (233 reviews)
+    </div>
+  </div>
+  <hr>
+
+  <div class="location">
+    <h3>Location</h3>
+  </div>
+  <hr>
+
+  <div class="host-card">
+    <div class="host">
+      <div class="host-img">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      </div>
+      <div class="host-details">
+        <h2>Hosted by <%= @flat.user.email %></h2>
+        <p>Joined in <%= @flat.user.created_at.strftime("%B %Y") %> </p>
+      </div>
+    </div>
+      <h3>During your stay</h3>
+    </div>
+  <hr>
+
+  <div class="flat-details">
+    <h2>Things to know</h2>
+    <div class="flat-details-flex">
+      <div class="flat-details-house-roules">
+        <p>House rules</p>
+        <p>Addtional rules</p>
+      </div>
+      <div class="flat-details-cancellation">
+        <p>Cancellation policy</p>
+      </div>
+  </div>
+</div>
+
