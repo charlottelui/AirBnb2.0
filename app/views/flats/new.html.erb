@@ -1,16 +1,18 @@
-<h2>Let's get started listing your space!</h2>
+<div class="container">
+  <h2>Let's get started listing your space!</h2>
 
-<div>
-  <%= simple_form_for @flat do |f| %>
-    <%= f.input :flat_type, label: 'What kind of place do you have?', as: :select, collection: ["Entire place", "Private room", "Shared room"] %>
-    <%= f.input :guests, label: 'How many guests can you accomodate?', as: :select, collection: 1..20 %>
-    <%= f.input :address, label: 'Where is the listing?' %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :bedrooms, label: 'How many bedrooms are availabe for the guests?', as: :select, collection: 1..20 %>
-    <%= f.input :bathrooms, label: 'How many bathrooms are available for the guests?', as: :select, collection: 1..20 %>
-    <%= f.input :amenities, as: :check_boxes, collection: ["Essentials", "Wifi", "TV", "Heat", "Air conditioning", "Iron", "Shampoo", "Hair dryer", "Breakfast, coffee, tea", "Desk/workspace", "Fireplace", "Closet/drawers", "Private entrance"] %>
-    <%= f.submit %>
-  <% end %>
+  <div>
+    <%= simple_form_for @flat do |f| %>
+      <%= f.input :flat_type, label: 'What kind of place do you have?', as: :select, collection: ["Entire place", "Private room", "Shared room"] %>
+      <%= f.input :guests, label: 'How many guests can you accomodate?', as: :select, collection: 1..20 %>
+      <%= f.input :address, label: 'Where is the listing?' %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :bedrooms, label: 'How many bedrooms are availabe for the guests?', as: :select, collection: 1..20 %>
+      <%= f.input :bathrooms, label: 'How many bathrooms are available for the guests?', as: :select, collection: 1..20 %>
+      <%= f.input :amenities, as: :check_boxes, collection: ["Essentials", "Wifi", "TV", "Heat", "Air conditioning", "Iron", "Shampoo", "Hair dryer", "Breakfast, coffee, tea", "Desk/workspace", "Fireplace", "Closet/drawers", "Private entrance"] %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
