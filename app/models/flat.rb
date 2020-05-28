@@ -1,6 +1,8 @@
 class Flat < ApplicationRecord
   belongs_to :user
 
+  has_many_attached :photos
+
   validates :address, presence: true
   validates :title, presence: true
   validates :description, presence: true
