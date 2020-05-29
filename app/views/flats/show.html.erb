@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @flat.title %> </h1>
   <p><%= @flat.address %></p>
-  <img src="https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="flat">
+  <%= cl_image_tag @first_photo, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
   <div class="card-flat">
     <div class="card-flat-infos">
       <div>
@@ -54,6 +54,7 @@
 
   <div class="amenities">
     <h3>Aminities</h3>
+
   </div>
   <hr>
 

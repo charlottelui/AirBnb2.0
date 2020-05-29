@@ -6,6 +6,8 @@ class FlatsController < ApplicationController
 
   def new
     @flat = Flat.new
+    @first_photo = @flat.photos.first
+    @remaining_photos = @flat.photos.reject{|photo| photo == @first_photo}
     authorize @flat
   end
 
