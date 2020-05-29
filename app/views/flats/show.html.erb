@@ -1,6 +1,6 @@
 <div class="container">
   <h1><%= @flat.title %> </h1>
-  <p><%= @flat.address %></p>
+  <p> <u> <%= @flat.address %></p></u>
   <div class="flat_carousel">
     <div class="big-photo">
       <%= cl_image_tag @first_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
