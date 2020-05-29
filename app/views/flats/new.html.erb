@@ -12,6 +12,7 @@
       <%= f.input :bedrooms, label: 'How many bedrooms are availabe for the guests?', as: :select, collection: 1..20 %>
       <%= f.input :bathrooms, label: 'How many bathrooms are available for the guests?', as: :select, collection: 1..20 %>
       <%= f.input :amenities, as: :check_boxes, collection: ["Essentials", "Wifi", "TV", "Heat", "Air conditioning", "Iron", "Shampoo", "Hair dryer", "Breakfast, coffee, tea", "Desk/workspace", "Fireplace", "Closet/drawers", "Private entrance"] %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.submit %>
     <% end %>
   </div>
