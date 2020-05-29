@@ -1,7 +1,19 @@
 <div class="container">
   <h1><%= @flat.title %> </h1>
   <p><%= @flat.address %></p>
-  <%= cl_image_tag @first_photo, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+  <div class="flat_carousel">
+    <div class="big-photo">
+      <%= cl_image_tag @first_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+    </div>
+    <div class="second_photos_div">
+      <%= cl_image_tag @second_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+      <%= cl_image_tag @third_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+    </div>
+    <div class="third_photos_div">
+      <%= cl_image_tag @forth_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+      <button>Show all photos</button>
+    </div>
+  </div>
   <div class="card-flat">
     <div class="card-flat-infos">
       <div>

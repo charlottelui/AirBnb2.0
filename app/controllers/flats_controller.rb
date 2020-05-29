@@ -1,13 +1,17 @@
 class FlatsController < ApplicationController
   def show
     @flat = Flat.find(params[:id])
+    @first_photo = @flat.photos.first
+    @second_photo = @flat.photos[1]
+    @third_photo = @flat.photos[2]
+    @forth_photo = @flat.photos[3]
+    @fifth_photo = @flat.photos[4]
+    @remaining_photos = @flat.photos[5..-1]
     authorize @flat
   end
 
   def new
     @flat = Flat.new
-    @first_photo = @flat.photos.first
-    @remaining_photos = @flat.photos.reject{|photo| photo == @first_photo}
     authorize @flat
   end
 
