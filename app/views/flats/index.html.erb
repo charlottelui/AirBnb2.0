@@ -9,6 +9,11 @@
     <div class="index-flat-cards">
       <% @flats.each do |flat| %>
         <div class="index-flat-card">
+          <% if flat.photos.attached? %>
+            <%= render 'index_carousel' %>
+          <% else %>
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <% end %>
           <div class="index-card-details">
             <div>
               <h2 class = "small-light-grey-text"><%= flat.flat_type %></h2>
