@@ -1,0 +1,130 @@
+
+/*Card flat */
+.container h1 {
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  margin-top: 10px !important;
+}
+
+.container p{
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.card-flat {
+  overflow: hidden;
+}
+
+.card-flat > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-flat h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+§
+.card-flat p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-flat .card-flat-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-flat-infos .card-flat-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-flat-info-flex {
+  display:flex;
+}
+
+.details-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 970px;
+}
+
+.details-flex h4{
+  font-size: 18px;
+}
+
+.details p{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.description h4{
+  font-size: 16px;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
+
+.description p{
+  text-decoration: underline;
+  font-weight: 600 !important;
+}
+
+.amenities h3{
+  font-size: 1rem !important;
+}
+
+.dates h3{
+  font-size: 1rem !important;
+}
+
+.dates h4{
+  font-size: 16px !important;
+  font-weight: 400;
+}
+
+.location h3{
+  font-size: 1rem !important;
+}
+.host {
+  display: flex;
+  justify-content: space-between;
+
+}
+.host h2{
+  font-size: 1rem !important;
+}
+
+.host-card h3{
+  font-size: 16px !important;
+  font-weight: 600;
+}
+.host-details p{
+  font-weight: 400;
+  font-size: 14px !important;
+  padding-top: 8px;
+  margin-right: 900px;
+}
+.host-details h2{
+  font-size: 1rem !important;
+}
+
+.flat-details h2{
+  font-size: 1rem !important;
+}
+.flat-details p{
+  font-size: 16px !important;
+}
+.flat-details-flex{
+  display:flex;
+  justify-content: space-between;
+}
