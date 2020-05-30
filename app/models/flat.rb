@@ -12,4 +12,7 @@ class Flat < ApplicationRecord
   validates :bedrooms, presence: true
   validates :bathrooms, presence: true
   validates :flat_type, inclusion: { in: ["Entire place", "Private room", "Shared room"]}
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
