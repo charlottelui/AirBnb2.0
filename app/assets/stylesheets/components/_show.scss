@@ -128,3 +128,33 @@
   display:flex;
   justify-content: space-between;
 }
+
+/*photos*/
+.flat_carousel {
+  display: flex;
+}
+
+
+.big-photo img{
+  width: 600px !important;
+  height: 100% !important;
+  object-fit: cover;
+  padding: 8px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.second_photos_div img {
+  width: 300px !important;
+  height: 300px !important;
+  padding: 8px;
+}
+
+.third_photos_div img{
+  width: 300px !important;
+  height: 300px !important;
+  padding: 8px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
