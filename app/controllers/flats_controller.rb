@@ -4,6 +4,10 @@ class FlatsController < ApplicationController
     authorize @flat
   end
 
+  def index
+     @flats = policy_scope(Flat)
+  end
+
   def new
     @flat = Flat.new
     authorize @flat
