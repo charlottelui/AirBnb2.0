@@ -59,9 +59,15 @@
   <hr>
 
   <div class="description">
-    <h4><%=@flat.description  %></h4>
-    <p> Contant host</p>
+    <p class="description-ph">The flat lies on the great Torstrasse, 3 Min walk to the famous Rosenthaler Platz. Only 2 stops away from Alexanderplatz and another 2 from Friedrichsstrasse. Shops, bars, cafes, restaurants and galleries surround you. Popular but still cosy/quiet.
+    The space is like a haven in bewteen alll the things going on outside on the famous Torstrasse. You have this hot spot infront of your doo<span id="dots">…</span><span id="more">r, but still a quiet place to withdraw to and recharge your batteries. Guest access
+You have access to the whole flat. It is used only as a vacational rental, so no roommates and I am not living there.Other things to note
+I am flexable with check-in and check-out. Still, this depends on two factors. If there are guests leaving or coming on your arrival and departure date. Then we will need to coordinate together. Often then the check-out has been at 12pm and the check-in at 2pm.
+I work and have a small child, so if I can not be at the flat when you arrive, the key will be at a near by store 2 minute walk away. Ready for you to pick up</span>.</p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
   </div>
+    <h class=> Contant host</h3>
   <hr>
 
   <div class="amenities">
@@ -114,4 +120,27 @@
       </div>
   </div>
 </div>
+
+<script>
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+// dots is not showing
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    // dont show the moretext div text.
+    moreText.style.display = "none";
+  } else {
+    //dont show the dots
+    dots.style.display = "none";
+    // change the inner text to read less
+    btnText.innerHTML = "Read less";
+    // the rest display inline.
+    moreText.style.display = "inline";
+  }
+}
+
+</script>
 

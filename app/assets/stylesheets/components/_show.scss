@@ -68,15 +68,22 @@
   font-weight: 400;
 }
 
-.description h4{
-  font-size: 16px;
-  font-weight: 400 !important;
-  line-height: 24px !important;
+.description button{
+  text-decoration: underline;
+  border:none;
 }
 
 .description p{
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  font-size: 16px;
+}
+
+.description h3{
   text-decoration: underline;
-  font-weight: 600 !important;
+  font-size: 14px;
+  font-weight: 400 !important;
+  padding: 8px;
 }
 
 .amenities h3{
@@ -157,4 +164,9 @@
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
+#more {
+  display: none;
+}
+
 
