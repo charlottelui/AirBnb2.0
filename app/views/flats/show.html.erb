@@ -6,11 +6,20 @@
       <%= cl_image_tag @first_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
     </div>
     <div class="second_photos_div">
-      <%= cl_image_tag @second_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
-      <%= cl_image_tag @third_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+        <%= cl_image_tag @second_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+        <%= cl_image_tag @third_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
     </div>
     <div class="third_photos_div">
-      <%= cl_image_tag @forth_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+      <% if @forth_photo %>
+        <%= cl_image_tag @forth_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+      <% else %>
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <% end %>
+      <% if @fifth_photo %>
+        <%= cl_image_tag @fifth_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+      <% else %>
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+      <% end %>
       <button>Show all photos</button>
     </div>
   </div>
@@ -83,8 +92,10 @@
   </div>
   <hr>
 
-  <div class="location">
+
     <h3>Location</h3>
+    <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@flat.latitude},#{@flat.longitude}&markers=#{@flat.latitude},#{@flat.longitude}&zoom=7&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+              class: 'img-fluid img-rounded', alt: "#{@flat.title} on the map"%>
   </div>
   <hr>
 
