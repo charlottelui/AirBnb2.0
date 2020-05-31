@@ -7,12 +7,9 @@ class FlatsController < ApplicationController
     @forth_photo = @flat.photos[3]
     @fifth_photo = @flat.photos[4]
     @remaining_photos = @flat.photos[5..-1]
-    @markers =
-     {
-        lat: @flat.latitude,
-        lng: @flat.longitude
-      }
+    @markers = [{:lat=>@flat.latitude, :lng=>@flat.longitude}]
     authorize @flat
+    raise
 
   end
 
