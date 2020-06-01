@@ -7,6 +7,13 @@ class FlatsController < ApplicationController
     @forth_photo = @flat.photos[3]
     @fifth_photo = @flat.photos[4]
     @remaining_photos = @flat.photos[5..-1]
+    # @flat = policy_scope(Flat.geocoded)
+    # @markers = @flat
+    #   {
+    #     lat: flat.latitude,
+    #     lng: flat.longitude
+    #   }
+
     authorize @flat
   end
 
