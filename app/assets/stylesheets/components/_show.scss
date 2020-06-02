@@ -3,6 +3,7 @@
 .container h1 {
   font-family: "Nunito", "Helvetica", "sans-serif";
   margin-top: 10px !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container p{
@@ -10,6 +11,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-flat {
@@ -20,18 +22,21 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-flat h2 {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 §
 .card-flat p {
   font-size: 16px;
   opacity: .7;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-flat .card-flat-infos {
@@ -40,6 +45,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-flat-infos .card-flat-user {
@@ -47,25 +53,30 @@
   right: 16px;
   top: -20px;
   width: 40px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-flat-info-flex {
   display:flex;
+  font-family: 'Roboto', sans-serif;
 }
 
 .details-flex {
   display: flex;
   justify-content: space-between;
   margin-right: 970px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .details-flex h4{
   font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .details p{
   font-size: 16px;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 .description button{
@@ -76,11 +87,14 @@
 .description p{
   font-weight: 400 !important;
   line-height: 24px !important;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+
 }
 
 .description h3{
   text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400 !important;
   padding: 8px;
@@ -88,57 +102,70 @@
 
 .amenities h3{
   font-size: 1rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .dates h3{
   font-size: 1rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .dates h4{
   font-size: 16px !important;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 .location h3{
   font-size: 1rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 .host {
   display: flex;
   justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
 
 }
 .host h2{
   font-size: 1rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .host-card h3{
   font-size: 16px !important;
   font-weight: 600;
+  font-family: 'Roboto', sans-serif;
 }
 .host-details p{
   font-weight: 400;
   font-size: 14px !important;
   padding-top: 8px;
   margin-right: 900px;
+  font-family: 'Roboto', sans-serif;
 }
 .host-details h2{
   font-size: 1rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .flat-details h2{
   font-size: 1rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 .flat-details p{
   font-size: 16px !important;
+  font-family: 'Roboto', sans-serif;
 }
 .flat-details-flex{
   display:flex;
   justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*photos*/
 .flat_carousel {
   display: flex;
+  font-family: 'Roboto', sans-serif;
 }
 
 

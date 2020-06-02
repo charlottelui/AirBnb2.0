@@ -1,13 +1,16 @@
 class FlatsController < ApplicationController
   def show
-    @flat = Flat.find(params[:id])
+    @flat = Flat.geocoded.find(params[:id])
     @first_photo = @flat.photos.first
     @second_photo = @flat.photos[1]
     @third_photo = @flat.photos[2]
     @forth_photo = @flat.photos[3]
     @fifth_photo = @flat.photos[4]
     @remaining_photos = @flat.photos[5..-1]
+    @markers = [{:lat=>@flat.latitude, :lng=>@flat.longitude}]
     authorize @flat
+    raise
+
   end
 
   def index
