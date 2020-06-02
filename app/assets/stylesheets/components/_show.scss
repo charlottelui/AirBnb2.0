@@ -79,17 +79,25 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.description h4{
-  font-size: 16px;
-  font-weight: 400 !important;
-  line-height: 24px !important;
-  font-family: 'Roboto', sans-serif;
+.description button{
+  text-decoration: underline;
+  border:none;
 }
 
 .description p{
-  text-decoration: underline;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+
+}
+
+.description h3{
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400 !important;
+  padding: 8px;
 }
 
 .amenities h3{
@@ -165,7 +173,6 @@
   width: 600px !important;
   height: 100% !important;
   object-fit: cover;
-  padding: 8px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
@@ -183,4 +190,9 @@
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
+#more {
+  display: none;
+}
+
 
