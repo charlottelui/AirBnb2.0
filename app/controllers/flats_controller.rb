@@ -7,7 +7,6 @@ class FlatsController < ApplicationController
     @forth_photo = @flat.photos[3]
     @fifth_photo = @flat.photos[4]
     @remaining_photos = @flat.photos[5..-1]
-    @des_count = @flat.description.split('').count
     authorize @flat
   end
 
