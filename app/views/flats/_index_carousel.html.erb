@@ -8,7 +8,7 @@
     <div class="carousel-item active">
       <%= cl_image_tag flat.photos.first.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100' %>
     </div>
-    <% flat.photos.each do |photo| %>
+    <% flat.photos.drop(1).each do |photo| %>
         <div class="carousel-item">
          <%= cl_image_tag photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100' %>
         </div>
@@ -21,4 +21,5 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  </div>
 </div>
