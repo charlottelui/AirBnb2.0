@@ -16,6 +16,7 @@
 .flat-title-index {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  color: black;
 }
 
 .index-flat-card .index-card-details {
@@ -24,4 +25,20 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+
+.small-black-text {
+  font-size: 16px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bold-black-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.search-results {
+  margin: 32px;
+
 }
