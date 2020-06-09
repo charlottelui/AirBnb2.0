@@ -2,8 +2,8 @@
   <!-- flats -->
   <div class="left-container">
     <div class="search-results">
-      <h3>This will be search result</h3>
-      <h1>Stays in search result city</h1>
+      <h2 class = "small-black-text">300+ stays  June 6-13  1 guest</h2>
+      <h1 class = "bold-black-text">Stays in Tel Aviv-Yafo</h1>
       <h2>filter options</h2>
     </div>
     <div class="index-flat-cards">
@@ -17,12 +17,13 @@
           <div class="index-card-details">
             <div>
               <h2 class = "small-light-grey-text"><%= flat.flat_type %></h2>
-              <h2 class = "flat-title-index"><%= flat.title %></h2>
+              <h2> <%= link_to flat.title, flat_path(flat), class: "flat-title-index", target: :_blank  %></h2>
               <h2 class = "small-light-grey-text"><%= flat.bedrooms %> bedrooms - <%= flat.bathrooms %> baths</h2>
+              <h2 class = "small-light-grey-text"><%= flat.amenities %> bedrooms - <%= flat.bathrooms %> baths</h2>
             </div>
-            <div class="index-flat-card-pricing">
-              <div class = "flat-price"><strong>$<%= flat.price %></strong> / night</div>
-            </div>
+          <div class="index-flat-card-pricing">
+            <div class = "flat-price"><strong>$<%= flat.price %></strong> / night</div>
+          </div>
           </div>
         </div>
       <% end %>
