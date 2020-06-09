@@ -9,8 +9,6 @@ class FlatsController < ApplicationController
     @remaining_photos = @flat.photos[5..-1]
     @markers = [{:lat=>@flat.latitude, :lng=>@flat.longitude}]
     authorize @flat
-    raise
-
   end
 
   def index
