@@ -58,7 +58,7 @@
   width:100%;
 }
 
-.index-flat-card{
+.index-flat-card {
   display:flex;
   justify-content: space-around;
 }
@@ -66,4 +66,7 @@
 .link {
   cursor:pointer;
 }
-
+ .carousel {
+   border-radius: 10px;
+    overflow: hidden;
+ }
