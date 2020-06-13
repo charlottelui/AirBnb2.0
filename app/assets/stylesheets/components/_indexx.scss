@@ -19,13 +19,13 @@
   color: black;
 }
 
-.index-flat-card .index-card-details {
-  padding: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
+// .index-flat-card .index-card-details {
+//   padding: 6px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
 
 .small-black-text {
   font-size: 16px;
@@ -56,5 +56,10 @@
 #map{
   height:100%;
   width:100%;
+}
+
+.index-flat-card{
+  display:flex;
+  justify-content: space-around;
 }
 
