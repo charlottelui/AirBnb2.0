@@ -19,13 +19,13 @@
   color: black;
 }
 
-.index-flat-card .index-card-details {
-  padding: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
+// .index-flat-card .index-card-details {
+//   padding: 6px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
 
 .small-black-text {
   font-size: 16px;
@@ -39,8 +39,7 @@
 }
 
 .search-results {
-  margin: 32px;
-
+  margin: 12px 0px 4px 27px;
 }
 .right-container {
   height: 100vh;
@@ -56,5 +55,25 @@
 #map{
   height:100%;
   width:100%;
+}
+
+.index-flat-card {
+  display:flex;
+  justify-content: space-evenly;
+  margin-left: -55px;
+}
+
+.link {
+  cursor:pointer;
+  text-decoration: none;
+}
+ .carousel {
+   border-radius: 10px;
+    overflow: hidden;
+ }
+
+.carousel-inner {
+  max-width: 400px;
+  max-height: 400px;
 }
 
