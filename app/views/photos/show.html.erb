@@ -1,17 +1,18 @@
+<%= link_to 'X Close', flat_path(@flat), class: "photos_btn" %>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+    <li class="not-visible-sx" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li class="not-visible-dx"  data-target="#myCarousel" data-slide-to=@photos[-1]></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= cl_image_tag flat.photos.first.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100' %>
+      <%= cl_image_tag @photos.first.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100' %>
     </div>
-    <% flat.photos.drop(1).each do |photo| %>
+    <% @photos.drop(1).each do |photo| %>
         <div class="carousel-item">
          <%= cl_image_tag photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100' %>
         </div>
@@ -26,3 +27,8 @@
   </a>
   </div>
 </div>
+
+
+
+
+
