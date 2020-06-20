@@ -6,10 +6,10 @@ class FlatsController < ApplicationController
     @third_photo = @flat.photos[2]
     @forth_photo = @flat.photos[3]
     @fifth_photo = @flat.photos[4]
-    @remaining_photos = @flat.photos[5..-1]
     @markers = [{:lat=>@flat.latitude, :lng=>@flat.longitude}]
     authorize @flat
   end
+
 
   def index
      @flats = policy_scope(Flat.geocoded)

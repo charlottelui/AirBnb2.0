@@ -2,7 +2,41 @@
   <h1><%= @flat.title %> </h1>
   <p> <u> <%= @flat.address %></p></u>
   <div class="flat_carousel">
-   <!--  To render the flat photos -->
+    <div class="big-photo">
+            <% if @first_photo %>
+              <%= cl_image_tag @first_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+            <% else %>
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+            <% end %>
+          </div>
+          <div class="second_photos_div">
+            <% if @second_photo %>
+              <%= cl_image_tag @second_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+            <% else %>
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+            <% end %>
+            <% if @third_photo %>
+              <%= cl_image_tag @third_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+            <% else %>
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+            <% end %>
+          </div>
+          <div class="third_photos_div">
+              <% if @forth_photo %>
+                <%= cl_image_tag @forth_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+              <% else %>
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+                <% end %>
+              <% if @fifth_photo %>
+                <%= cl_image_tag @fifth_photo.key, height: 400, width: 400, crop: :fill, class: 'd-block w-100 show-card-img' %>
+              <% else %>
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+              <% end %>
+            <div class="btn-flex">
+              <%= link_to "Show all photos",  flat_photo_path(@flat), class: "btn-flex" %>
+            </div>
+        </div>
+    </div>
   </div>
   <div class="card-flat">
     <div class="card-flat-infos">
@@ -53,7 +87,6 @@
       <%= @flat.description.first(500) %><span id="dots">…</span><span id="more">
        <%= @flat.description[500..-1] %> </span>.</p>
       <button onclick="myFunction()" id="myBtn">Read more</button>
-
   </div>
     <h class=> Contant host</h3>
   <hr>

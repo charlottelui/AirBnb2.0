@@ -1,0 +1,89 @@
+
+/*Carousel*/
+.carousel-item {
+  margin-top: 100px;
+  img{
+  width: 50% !important;
+  margin: 0 auto;
+ }}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: black;
+}
+
+body {
+    /* Set "my-sec-counter" to 0 */
+    counter-reset:my-sec-counter;
+}
+.carousel-caption {
+    background:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,.5);
+    text-shadow:0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+// add # instead of _ _ _ in the carousel
+.carousel-indicators {
+  bottom: 400px !important;
+  li {
+    text-indent: 0;
+    margin: 0 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    line-height: 30px;
+    color: #fff;
+    background-color: #999;
+    transition: all 0.25s ease;
+    &.active, &:hover {
+      margin: 0 2px;
+      width: 30px;
+      height: 30px;
+      background-color: #337ab7;
+    }
+  }
+}
+
+//to show the photo #
+.carousel-indicators {
+  li {
+    &:before {
+      //  increases or decreases the value of one or more CSS counters.
+      counter-increment: my-sec-counter;
+      // is used with the ::before and ::after pseudo-elements, to insert generated content.
+      content: counter(my-sec-counter);
+     // Moves an element sideways or up and down.
+      transform: translate(10px,10px);
+    }
+  }
+}
+
+/*photos-btn*/
+.photos_btn{
+  background-color: rgba(34, 34, 34, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  text-decoration: none;
+  color: rgba(34, 34, 34, 0.7);
+  font-weight: 400;
+}

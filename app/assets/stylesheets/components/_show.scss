@@ -191,6 +191,14 @@
   border-bottom-right-radius: 30px;
 }
 
+.btn-flex {
+  background-color: white;
+  position: absolute;
+  bottom: 22%;
+  right: 27%;
+  z-index: 5;
+}
+
 #more {
   display: none;
 }
