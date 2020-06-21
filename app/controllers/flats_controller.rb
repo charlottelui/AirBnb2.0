@@ -29,6 +29,7 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
     @flat.user = current_user
+    @flat.amenities.delete_at(0)
     authorize @flat
     if @flat.save
       redirect_to flat_path(@flat)
@@ -44,6 +45,7 @@ class FlatsController < ApplicationController
 
   def update
     @flat = Flat.find(params[:id])
+    @flat.amenities.delete_at(0) if @flat.amenities[0] == ''
     authorize @flat
     if @flat.update(flat_params)
       redirect_to flat_path(@flat)
