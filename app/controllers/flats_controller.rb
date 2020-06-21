@@ -37,6 +37,21 @@ class FlatsController < ApplicationController
     end
   end
 
+  def edit
+    @flat = Flat.find(params[:id])
+    authorize @flat
+  end
+
+  def update
+    @flat = Flat.find(params[:id])
+    authorize @flat
+    if @flat.update(flat_params)
+      redirect_to flat_path(@flat)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def flat_params
